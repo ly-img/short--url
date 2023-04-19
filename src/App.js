@@ -12,7 +12,7 @@ const tabList = [
   // },
   {
     key: 'tab2',
-    tab: '自定义短链',
+    tab: '自定bfgh义短链',
   },
 ]
 
