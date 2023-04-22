@@ -1,6 +1,6 @@
 // 项目名，决定html从哪个项目获取，
 const github_repo = typeof(GITHUB_REPO)!="undefined" ? GITHUB_REPO
-    : 'ly-img/short--url'
+    : 'lystv/short'
 // 项目版本，cdn会有缓存，所以有更新时需要指定版本，
 const github_version = typeof(GITHUB_VERSION)!="undefined" ? GITHUB_VERSION
     : '@main'
@@ -178,7 +178,7 @@ async function handleRequest(request) {
   console.log(path)
   if(!path){
 
-    const html= await fetch(`https://cdn.jsdelivr.net/gh/${github_repo}${github_version}/build/index.html`)
+    const html= await fetch(`https://cdn.jsdelivr.net/gh/${github_repo}${github_version}/index.html`)
     const text = (await html.text())
 
     return new Response(text, {
